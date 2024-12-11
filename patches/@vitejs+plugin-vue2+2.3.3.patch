@@ -1,0 +1,22 @@
+diff --git a/node_modules/@vitejs/plugin-vue2/dist/index.mjs b/node_modules/@vitejs/plugin-vue2/dist/index.mjs
+index 984a2f0..e4b8438 100644
+--- a/node_modules/@vitejs/plugin-vue2/dist/index.mjs
++++ b/node_modules/@vitejs/plugin-vue2/dist/index.mjs
+@@ -5,7 +5,7 @@ import path from 'node:path';
+ import { createHash } from 'node:crypto';
+ 
+ function resolveCompiler(root) {
+-  const compiler = tryRequire("vue/compiler-sfc", root) || tryRequire("vue/compiler-sfc");
++  const compiler = tryRequire("vue2/compiler-sfc", root) || tryRequire("vue2/compiler-sfc");
+   if (!compiler) {
+     throw new Error(`Failed to resolve vue/compiler-sfc.
+ @vitejs/plugin-vue2 requires vue (>=2.7.0) to be present in the dependency tree.`);
+@@ -1097,7 +1097,7 @@ function vuePlugin(rawOptions = {}) {
+       if (query.raw) {
+         return;
+       }
+-      if (!filter(filename) && !query.vue) {
++      if (!filter(filename)) {
+         return;
+       }
+       if (!query.vue) {
