@@ -26,8 +26,6 @@ npm run dev
 npm run build
 ```
 
-> ⚠️ Build configuration is not ready yet. See "Open Issues" section below.
-
 ## Technical Implementation
 
 ### 1. Package Aliases
@@ -80,9 +78,6 @@ A patch for @vitejs/plugin-vue2 is required to make it work alongside Vue 3:
 - Purpose: Modifies the plugin to use the correct compiler and prevent conflicts
 - See patch file for specific changes
 
-## Open Issues
-
-- [ ] fix build configuration.
 
 ## Known Limitations
 
